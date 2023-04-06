@@ -1,0 +1,14 @@
+{
+    "window.zoomLevel": 2,
+    "terminal.integrated.defaultProfile.linux": "fish",
+    "terminal.integrated.fontFamily": "FiraCode Nerd Font Mono",
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.minimap.enabled": false,
+    "diffEditor.renderSideBySide": false,
+    "editor.tabSize": 2
+}
