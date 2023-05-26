@@ -12,6 +12,7 @@ echo -e "\033[0;32m>>>>> Installing Arch Packages <<<<<\033[0m"
 archPackages=(
   # Communications
   signal-desktop
+  wire-desktop
 
   # Web Browsers
   firefox
@@ -29,8 +30,16 @@ archPackages=(
   vscodium
   insomnia
 
+  # Editors
+  gedit
+  vim
+
   # Utilities
   fisher
+  gnome-disk-utility
+  grsync
+  meld
+  tree
 )
 
 for package in ${archPackages[@]}; do
