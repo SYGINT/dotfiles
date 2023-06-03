@@ -12,7 +12,7 @@ sudo pacman -S base-devel
 sudo pacman -S artix-archlinux-support
 
 # Edit pacman.d mirror list to include arch repos
-sudo sed '$!N;s/\[galaxy\]\nInclude = \/etc\/pacman\.d\/mirrorlist/&\n\n\[extra\]\nInclude = \/etc\/pacman\.d\/mirrorlist-arch\n\n\[community\]\nInclude = \/etc\/pacman\.d\/mirrorlist-arch/;P;D' /etc/pacman.conf >> /etc/pacman.conf
+sudo sed -i '$!N;s/\[galaxy\]\nInclude = \/etc\/pacman\.d\/mirrorlist/&\n\n\[extra\]\nInclude = \/etc\/pacman\.d\/mirrorlist-arch\n\n\[community\]\nInclude = \/etc\/pacman\.d\/mirrorlist-arch/;P;D' /etc/pacman.conf
 
 if [ ! "$(command -v chezmoi)" ]; then
   sudo pacman -S chezmoi
