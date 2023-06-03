@@ -2,6 +2,18 @@
 
 set -e # -e: exit on error
 
+# Update Repositories and Packages
+sudo pacman -Syu
+
+# Add needed packages
+sudo pacman -S base-devel
+
+# Add Arch support
+sudo pacman -S artix-archlinux-support
+
+# Edit pacman.d mirror list to include arch repos
+sed '$!N;s/\[galaxy\]\nInclude = \/etc\/pacman\.d\/mirrorlist/&\n\n\[extra\]\nInclude = \/etc\/pacman\.d\/mirrorlist-arch\n\n\[community\]\nInclude = \/etc\/pacman\.d\/mirrorlist-arch/;P;D' /etc/pacman.conf >> /etc/pacman.conf
+
 if [ ! "$(command -v chezmoi)" ]; then
   sudo pacman -S chezmoi
 fi
