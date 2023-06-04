@@ -1,9 +1,9 @@
 #!/bin/sh
 
-{{ if ne .chezmoi.osRelease.id "garuda" -}}
-  echo "only Garuda Linux is supported"
-  exit 1
-{{ end -}}
+# {{ if ne .chezmoi.osRelease.id "garuda" -}}
+#   echo "only Garuda Linux is supported"
+#   exit 1
+# {{ end -}}
 
 set -eufo pipefail
 
