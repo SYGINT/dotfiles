@@ -32,9 +32,11 @@ sudo pacman -Sy
 # Add Arch support
 sudo pacman -S artix-archlinux-support
 
+sudo pacman-key --populate archlinux
+
 # Edit pacman.d mirror list to include arch repos
-sudo sed -i '$!N;s/\[galaxy\]\nInclude = \/etc\/pacman\.d\/mirrorlist/&\n\n\[extra\]\nInclude = \/etc\/pacman\.d\/mirrorlist-arch\n\n\[community\]\nInclude = \/etc\/pacman\.d\/mirrorlist-arch/;P;D' /etc/pacman.conf
-sudo pacman -Sy
+# sudo sed -i '$!N;s/\[galaxy\]\nInclude = \/etc\/pacman\.d\/mirrorlist/&\n\n\[extra\]\nInclude = \/etc\/pacman\.d\/mirrorlist-arch\n\n\[community\]\nInclude = \/etc\/pacman\.d\/mirrorlist-arch/;P;D' /etc/pacman.conf
+# sudo pacman -Sy
 
 if [ ! "$(command -v chezmoi)" ]; then
   sudo pacman -S chezmoi
