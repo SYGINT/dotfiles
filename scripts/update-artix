@@ -1,0 +1,5 @@
+#!/bin/bash
+rankmirrors -v -n 5 /etc/pacman.d/mirrorlist.pacnew | tee /etc/pacman.d/mirrorlist &&
+reflector --score 5  --protocol https | tee /etc/pacman.d/mirrorlist-arch &&
+pacman -Sc --noconfirm &&
+pacman -Syu --noconfirm
