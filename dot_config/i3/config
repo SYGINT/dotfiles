@@ -1,0 +1,71 @@
+# Please see http://i3wm.org/docs/userguide.html for a complete reference!
+
+#################
+### Variables ###
+#################
+
+# Modifier and Alt
+set $mod Mod4
+set $alt Mod1
+
+# Applications
+set $preferredTerminalEmulator /usr/bin/kitty
+# set $preferredMailClient /usr/bin/geary
+set $preferredBrowser /usr/bin/firefox
+set $preferredFileManager /usr/bin/thunar
+# set $preferredTextEditor /usr/bin/geany
+# set $preferredScreenCaptureTool /usr/bin/flameshot gui
+
+# System
+set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
+
+# Font for window titles. Will also be used by the bar unless a different font
+# is used in the bar {} block below.
+font pango: source code pro 10
+# font pango:monospace 8
+#font pango:DejaVu Sans Mono 8
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# Gaps
+gaps inner 0
+gaps outer -2
+
+# Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
+# gaps inner|outer current|all set|plus|minus <px>
+# gaps inner all set 10
+# gaps outer all plus 5
+
+# Smart gaps (gaps used if only more than one container on the workspace)
+smart_gaps on
+
+# Smart borders (draw borders around container only if it is not the only container on this workspace)
+# on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
+smart_borders on
+
+# move tiling windows via drag & drop by left-clicking into the title bar,
+# or left-clicking anywhere into the window while holding the floating modifier.
+# tiling_drag modifier titlebar
+
+# Color of border, background, text, indicator, and child_border
+client.focused              #bf616a #2f343f #d8dee8 #bf616a #d8dee8
+client.focused_inactive     #2f343f #2f343f #d8dee8 #2f343f #2f343f
+client.unfocused            #2f343f #2f343f #d8dee8 #2f343f #2f343f
+client.urgent               #2f343f #2f343f #d8dee8 #2f343f #2f343f
+client.placeholder          #2f343f #2f343f #d8dee8 #2f343f #2f343f
+client.background           #2f343f
+
+# Modes
+include modes
+
+# Keybindings
+include keybindings/common
+include keybindings/modes
+include keybindings/quick_launch
+include keybindings/workspaces
+include keybindings/multimedia
+
+include window_rules
+include i3bar
+include auto_start

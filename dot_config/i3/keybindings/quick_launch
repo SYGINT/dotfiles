@@ -1,0 +1,28 @@
+####################################
+### Quick Launch App Keybindings ###
+####################################
+
+bindsym $mod+F1 exec $preferredBrowser;focus
+# bindsym $mod+F2 exec $preferredMailClient;focus
+bindsym $mod+F3 exec $preferredFileManager;focus
+# bindsym $mod+F4 exec $preferredTextEditor;focus
+
+# Print screen
+# bindsym $mod+F9 exec $preferredScreenCaptureTool
+# bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
+# bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
+# bindsym Print exec --no-startup-id $preferredScreenCaptureTool
+
+bindsym $mod+t exec $preferredTerminalEmulator
+
+# start dmenu (a program launcher)
+# bindsym $mod+Shift+d exec i3-dmenu-desktop --dmenu="dmenu -i -fn 'Noto Sans:size=20'"
+
+# start rofi (a program launcher) change modus Ctrl + Tab
+bindsym $mod+d exec rofi -show run
+# bindsym $mod+d exec --no-startup-id dmenu_run
+# A more modern dmenu replacement is rofi:
+# bindcode $mod+40 exec "rofi -modi drun,run -show drun"
+# There also is i3-dmenu-desktop which only displays applications shipping a
+# .desktop file. It is a wrapper around dmenu, so you need that installed.
+# bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop

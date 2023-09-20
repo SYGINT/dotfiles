@@ -1,0 +1,32 @@
+# [click]
+# full_text=Click me!
+# command=echo "Got clicked with button $button"
+# color=#F79494
+
+[iface]
+#instance=wlan0
+#color=#00FF00
+interval=10
+separator=false
+
+[wifi]
+instance=wlan0
+interval=10
+separator=false
+
+[bandwidth]
+instance=wlan0
+interval=5
+
+# Update time every 5 seconds
+[time]
+command=date '+%a %b %d, %Y @ %I:%M'
+# command=./scripts/time.sh
+# if [ $button ]; then date '+%a %b %d, %Y @ %I:%M'; else date '+%I:%M'; fi
+interval=5
+
+# Guess the weather hourly
+# [weather]
+# command=curl -Ss 'https://wttr.in?0&T&Q' | cut -c 16- | head -2 | xargs echo
+# interval=3600
+# color=#A4C2F4

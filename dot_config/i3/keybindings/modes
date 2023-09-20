@@ -1,0 +1,7 @@
+#########################
+### Modes Keybindings ###
+#########################
+
+bindsym $mod+r mode "resize"
+bindsym $mod+Shift+g mode "$mode_gaps"
+bindsym $mod+0 mode "$mode_system"

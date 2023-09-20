@@ -1,0 +1,32 @@
+exec --no-startup-id ~/.fehbg
+exec --no-startup-id xsettingsd &
+#exec --no-startup-id pasystray
+exec --no-startup-id conky
+exec --no-startup-id conky -c ~/.config/conky/conky-shcts
+exec --no-startup-id copyq
+exec --no-startup-id dunst
+# exec --no-startup-id desktop-items
+# exec --no-startup-id nm-applet
+# exec --no-startup-id pamac-tray
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id xfce4-power-manager
+exec_always --no-startup-id ff-theme-util
+exec_always --no-startup-id setcursor
+exec_always --no-startup-id ${HOME}/.config/polybar/launch.sh
+exec_always --no-startup-id numlockx on
+exec_always --no-startup-id xinput set-prop "ASUE120D:00 04F3:31FB Touchpad" "libinput Tapping Enabled" 1
+exec blueberry-tray
+exec --no-startup-id java -Xmx1024m -jar "/opt/xdman/xdman.jar" -m
+
+# NetworkManager is the most popular way to manage wireless networks on Linux,
+# and nm-applet is a desktop environment-independent system tray GUI for it.
+# exec --no-startup-id nm-applet
+
+# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
+# screen before suspend. Use loginctl lock-session to lock your screen.
+# exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+
+# Start XDG autostart .desktop files using dex. See also
+# https://wiki.archlinux.org/index.php/XDG_Autostart
+# exec --no-startup-id dex -a -s /etc/xdg/autostart/:~/.config/autostart/
+# exec --no-startup-id dex --autostart --environment i3
