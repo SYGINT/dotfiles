@@ -1,0 +1,57 @@
+#!/bin/sh
+
+set -eufo pipefail
+
+source ~/.local/share/chezmoi/helpers.sh
+
+TASK="Installing Virtualization Packages"
+
+log "$TASK"
+
+# Install packages
+packages=(
+  # main packages
+  qemu
+  virt-manager
+  virt-viewer
+
+  # openrc based
+  libvirt-openrc
+
+  # uefi support
+  ovmf
+
+  dnsmasq
+  spice-vdagent
+
+  # vde2
+  # bridge-utils
+  # openbsd-netcat
+  # ebtables
+  # iptables-nft
+  # libguestfs
+)
+
+for package in ${packages[@]}; do
+  if [ "$(paru -Qq $package 2> /dev/null)" != $package ]; then
+    echo "installing $package"
+    paru -S --noconfirm $package
+  fi
+done
+
+# add user to kvm group
+sudo usermod -a -G libvirt $(whoami)
+
+# Add module name in /etc/modules-load.d/kvm.conf
+if [[ "$(grep kvm_intel /etc/modules-load.d/kvm.conf | wc -l)" -eq 0 ]]; then
+  echo "kvm_intel" | sudo tee -a /etc/modules-load.d/kvm.conf
+fi
+
+modprobe kvm_intel
+
+echo "done"
+
+# Start libvirtd
+sudo rc-service libvirtd start
+
+log "Finished $TASK"

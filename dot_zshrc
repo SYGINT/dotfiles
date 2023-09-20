@@ -1,0 +1,32 @@
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+# End of lines configured by zsh-newuser-install
+
+# Zsh Plugins
+source ~/.zsh_plugins/zsh-defer/zsh-defer.plugin.zsh
+zsh-defer source ~/.zsh_plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+zsh-defer source ~/.zsh_plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+zsh-defer source ~/.zsh_plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+
+# asdf version manager
+source /opt/asdf-vm/asdf.sh
+
+# Starship Prompt
+eval "$(starship init zsh)"
+
+# pnpm
+# export PNPM_HOME="/home/syg/.local/share/pnpm"
+# case ":$PATH:" in
+#   *":$PNPM_HOME:"*) ;;
+#   *) export PATH="$PNPM_HOME:$PATH" ;;
+# esac
+
+# pnpm
+export PNPM_HOME="/home/syg/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

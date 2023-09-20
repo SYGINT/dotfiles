@@ -1,0 +1,14 @@
+#!/bin/sh
+
+set -eufo pipefail
+
+source ~/.local/share/chezmoi/helpers.sh
+
+TASK="Configuring monitors"
+
+log "$TASK"
+
+# xrandr --output HDMI-0 --primary --mode 5120x1440 --pos 0x1600 --rotate normal --output DP-0 --mode 2560x1600 --pos 0x0 --rotate normal --output DP-1 --off --output DP-2 --off --output DP1 --off --output DP2 --off --output VIRTUAL1 --off
+
+log "Finished $TASK"
+
