@@ -52,6 +52,16 @@ archPackages=(
   kitty
   terminator
 
+  # Audio
+  pipewire
+  pipewire-audio
+  pipewire-docs
+  pipewire-pulse
+  pipewire-openrc
+  wireplumber
+  wireplumber-openrc
+  pavucontrol
+
   # Virtualization
   virtualbox
   virtualbox-guest-iso
