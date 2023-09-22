@@ -25,6 +25,9 @@ exec --no-startup-id nm-applet
 # Start pipewire, pipewire-pulse, and wireplumber
 exec --no-startup-id /usr/bin/pipewire & /usr/bin/pipewire-pulse & /usr/bin/wireplumber
 
+# Set 3 monitor setup
+exec --no-startup-id xrandr --output HDMI-0 --primary --mode 3440x1440 --pos 2560x80 --rotate normal --output DP-0 --mode 2560x1600 --pos 0x0 --rotate normal --output DP-1 --mode 1920x1080 --pos 6000x80 --rotate right --output DP-2 --off --output None-2-1 --off --output DP1 --off --output DP2 --off --output VIRTUAL1 --off
+
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 # exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
