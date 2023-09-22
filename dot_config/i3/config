@@ -4,6 +4,11 @@
 ### Variables ###
 #################
 
+# Monitors
+set $main_monitor "HDMI-0"
+set $secondary_monitor "DP-1"
+set $tertiary_monitor "DP-0"
+
 # Modifier and Alt
 set $mod Mod4
 set $alt Mod1
