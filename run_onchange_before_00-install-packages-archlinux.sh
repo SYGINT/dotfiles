@@ -20,7 +20,6 @@ log "$TASK"
 archPackages=(
   # Communications
   element-desktop
-  fractal
   signal-desktop
   slack-desktop
   konversation
@@ -28,7 +27,7 @@ archPackages=(
 
   # Development
   vscodium # AUR
-  insomnia # AUR
+  insomnia-electron # AUR
 
   # Display Manager
   lightdm
@@ -52,6 +51,23 @@ archPackages=(
   alacritty
   kitty
   terminator
+
+  # Virtualization
+  virtualbox
+  virtualbox-guest-iso
+
+  # Web Browsers
+  firefox
+  chromium
+  librewolf
+  vivaldi
+  brave-bin
+
+  # Window Manager
+  i3-wm
+  i3status
+  i3blocks
+  i3lock
 
   # Utilities
   arandr
@@ -105,23 +121,6 @@ archPackages=(
   xorg-xbacklight
   xorg-xinput
   xidel
-
-  # Virtualization
-  virtualbox
-  virtualbox-guest-iso
-
-  # Web Browsers
-  firefox
-  chromium
-  librewolf
-  vivaldi
-  brave-bin
-
-  # Window Manager
-  i3-wm
-  i3status
-  i3blocks
-  i3lock
 )
 
 for package in ${archPackages[@]}; do
