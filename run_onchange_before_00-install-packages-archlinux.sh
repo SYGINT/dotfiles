@@ -27,7 +27,9 @@ archPackages=(
   konversation
   wire-desktop
 
-  # Development
+  # Code/Text Editors
+  gedit
+  vim
   vscodium # AUR
   insomnia-electron # AUR
 
@@ -35,11 +37,8 @@ archPackages=(
   lightdm
   lightdm-gtk-greeter
 
-  # Editors
-  gedit
-  vim
-
   # File Browser
+  filezilla
   nemo
 
   # Multimedia
