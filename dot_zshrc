@@ -34,3 +34,8 @@ esac
 path=('/usr/bin/shiori' $path)
 
 alias opener='docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock artemkaxboy/opener'
+
+export PATH
+
+# Created by `pipx` on 2023-12-04 10:33:01
+export PATH="$PATH:/home/syg/.local/bin"
