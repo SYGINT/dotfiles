@@ -32,3 +32,5 @@ esac
 # pnpm end
 
 path=('/usr/bin/shiori' $path)
+
+alias opener='docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock artemkaxboy/opener'
