@@ -29,6 +29,10 @@ archPackages=(
 
   # Code/Text Editors
   gedit
+  lunarvim-git
+  neovim
+  sublime-text-4
+  ted
   vim
   vscodium # AUR
   insomnia-electron # AUR
