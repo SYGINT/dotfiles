@@ -19,7 +19,9 @@ log "$TASK"
 
 archPackages=(
   # Communications
+  cinny-desktop
   element-desktop
+  # fluffychat #disabled
   signal-desktop
   slack-desktop
   konversation
