@@ -18,6 +18,14 @@ exec_always --no-startup-id xinput set-prop "ASUE120D:00 04F3:31FB Touchpad" "li
 exec blueberry-tray
 exec --no-startup-id java -Xmx1024m -jar "/opt/xdman/xdman.jar" -m
 
+# Apps
+exec element-desktop
+exec firefox
+exec chromium
+exec slack
+exec wire
+exec vscodium
+
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
