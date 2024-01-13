@@ -21,10 +21,11 @@ archPackages=(
   # Communications
   cinny-desktop
   element-desktop
-  #fluffychat #disabled
+  # fluffychat #disabled
+  konversation
   signal-desktop
   slack-desktop
-  konversation
+  telegram-desktop
   wire-desktop
 
   # Code/Text Editors
