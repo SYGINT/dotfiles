@@ -35,5 +35,5 @@
   "[vue]": {
     "editor.defaultFormatter": "Vue.volar"
   },
-  "workbench.iconTheme": "material-icon-theme"
+  "window.zoomLevel": -1
 }
