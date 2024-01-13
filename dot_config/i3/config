@@ -14,7 +14,7 @@ set $mod Mod4
 set $alt Mod1
 
 # Applications
-set $preferredTerminalEmulator /usr/bin/kitty
+set $preferredTerminalEmulator /usr/bin/alacritty
 # set $preferredMailClient /usr/bin/geary
 set $preferredBrowser /usr/bin/firefox
 set $preferredFileManager /usr/bin/thunar
