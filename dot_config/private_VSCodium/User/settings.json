@@ -35,5 +35,6 @@
   "[vue]": {
     "editor.defaultFormatter": "Vue.volar"
   },
+  "svelte.enable-ts-plugin": true,
   "window.zoomLevel": -1
 }
