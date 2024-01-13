@@ -35,6 +35,18 @@
   "[vue]": {
     "editor.defaultFormatter": "Vue.volar"
   },
+  "workbench.iconTheme": "material-icon-theme",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.colorTheme": "Default Dark+",
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[astro]": {
+    "editor.defaultFormatter": "astro-build.astro-vscode"
+  },
+  "git.openRepositoryInParentFolders": "always",
   "svelte.enable-ts-plugin": true,
   "window.zoomLevel": -1
 }
