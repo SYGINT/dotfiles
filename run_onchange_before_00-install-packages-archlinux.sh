@@ -21,7 +21,7 @@ archPackages=(
   # Communications
   cinny-desktop
   element-desktop
-  # fluffychat #disabled
+  #fluffychat #disabled
   signal-desktop
   slack-desktop
   konversation
@@ -35,7 +35,19 @@ archPackages=(
   ted
   vim
   vscodium # AUR
-  insomnia-electron # AUR
+
+  # Development
+  dbeaver
+  docker
+  docker-openrc
+  docker-compose
+  go
+  insomnium
+  jetbrains-fleet
+  lapce
+  python-pipx
+  pocketbase-bin
+  webstorm
 
   # Display Manager
   lightdm
@@ -50,11 +62,13 @@ archPackages=(
   inkscape
 
   # Productivity
+  focalboard-bin
+  libreoffice-fresh
   obsidian
 
   # Terminal
   alacritty
-  kitty
+  guake
   terminator
 
   # Audio
@@ -68,13 +82,17 @@ archPackages=(
   pavucontrol
 
   # Virtualization
+  #playonlinux
+  #wine-stable-next
   virtualbox
   virtualbox-guest-iso
 
   # Web Browsers
-  firefox
   chromium
-  librewolf
+  firefox
+  google-chrome
+  # librewolf
+  opera
   vivaldi
   brave-bin
 
@@ -93,9 +111,10 @@ archPackages=(
   bluez-openrc
   conky
   libwebp # convert to webp
+  downgrade
   dunst
   engrampa
-  # filezilla
+  flatpak
   fontforge
   gedit
   gnome-disk-utility
@@ -103,10 +122,12 @@ archPackages=(
   gnome-system-monitor
   grsync
   hardinfo
+  htop
   inetutils
   linux-firmware
   lshw
   lsof
+  mate-calc
   meld
   nemo-engrampa
   networkmanager
@@ -126,8 +147,9 @@ archPackages=(
   reflector
   rofi
   solaar
+  syncthing
+  syncthing-openrc
   synology-assistant
-  # synology-drive
   tree
   unarchiver
   unzip
