@@ -35,7 +35,8 @@ archPackages=(
   sublime-text-4
   ted
   vim
-  vscodium # AUR
+  vscodium-bin # AUR
+  # zed-editor
 
   # Development
   dbeaver
@@ -93,6 +94,7 @@ archPackages=(
   firefox
   google-chrome
   # librewolf
+  microsoft-edge-stable-bin
   opera
   vivaldi
   brave-bin
