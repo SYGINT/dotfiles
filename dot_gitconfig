@@ -23,3 +23,5 @@
 	sl = stash list
 [core]
 	editor = vim
+[push]
+	autoSetupRemote = true
