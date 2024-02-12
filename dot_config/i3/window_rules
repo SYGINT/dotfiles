@@ -45,3 +45,4 @@ assign [class="Wire"] $ws8
 assign [class="Element"] $ws8
 assign [class="Signal"] $ws8
 assign [class="Slack"] $ws8
+assign [class="Telegram"] $ws8

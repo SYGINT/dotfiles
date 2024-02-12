@@ -22,8 +22,10 @@ exec --no-startup-id java -Xmx1024m -jar "/opt/xdman/xdman.jar" -m
 exec element-desktop
 exec firefox
 exec chromium
+exec signal-desktop
 exec slack
-exec wire
+exec telegram-desktop
+exec wire-desktop
 exec vscodium
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
