@@ -43,10 +43,11 @@ archPackages=(
   docker
   docker-openrc
   docker-compose
-  go
+  gittyup
   insomnium
   jetbrains-fleet
   lapce
+  mongodb-compass
   python
   python-pip
   python-pipx
