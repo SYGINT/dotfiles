@@ -47,7 +47,10 @@ archPackages=(
   insomnium
   jetbrains-fleet
   lapce
+  python
+  python-pip
   python-pipx
+  python-wheel
   pocketbase-bin
   webstorm
 
@@ -144,9 +147,6 @@ archPackages=(
   pacman-contrib # for rankmirrors
   peek
   polybar
-  python
-  python-pip
-  python-wheel
   reflector
   rofi
   solaar
