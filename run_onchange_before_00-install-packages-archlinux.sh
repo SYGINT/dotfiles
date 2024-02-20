@@ -112,6 +112,7 @@ archPackages=(
   arandr
   asdf-vm
   archlinux-keyring
+  baobab
   bluez
   bluez-utils
   bluez-openrc
@@ -138,6 +139,7 @@ archPackages=(
   networkmanager
   network-manager-applet
   networkmanager-openrc
+  nfs-utils
   nitrogen
   nm-connection-editor
   openslide
