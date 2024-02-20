@@ -122,7 +122,6 @@ archPackages=(
   engrampa
   flatpak
   fontforge
-  gedit
   gnome-disk-utility
   gnome-screenshot
   gnome-system-monitor
