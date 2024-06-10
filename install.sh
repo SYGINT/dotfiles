@@ -20,17 +20,16 @@ Include = /etc/pacman.d/mirrorlist-arch
 Include = /etc/pacman.d/mirrorlist-arch"
 
 # Update Repositories and Packages
-sudo pacman -Syu
+sudo pacman -Syu --noconfirm
 
-# Add needed packages
-sudo pacman -S base-devel
+sudo pacman -S base-devel --noconfirm
 
 # Add universe repos
 echo "${universe}" | sudo tee -a /etc/pacman.conf
-sudo pacman -Sy
+sudo pacman -Sy --noconfirm
 
 # Add Arch support
-sudo pacman -S artix-archlinux-support
+sudo pacman -S artix-archlinux-support --noconfirm
 
 sudo pacman-key --populate archlinux
 
@@ -39,7 +38,7 @@ sudo pacman-key --populate archlinux
 # sudo pacman -Sy
 
 if [ ! "$(command -v chezmoi)" ]; then
-  sudo pacman -S chezmoi
+  sudo pacman -S chezmoi --noconfirm
 fi
 
 chezmoi init --apply https://github.com/sygint/dotfiles.git
