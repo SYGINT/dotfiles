@@ -12,7 +12,7 @@ Server = https://mirror1.cl.netactuate.com/artix/universe/\$arch
 Server = https://ftp.crifo.org/artix-universe/\$arch
 Server = https://artix.sakamoto.pl/universe/\$arch"
 
-arch_repos="
+arch="
 [extra]
 Include = /etc/pacman.d/mirrorlist-arch
 
@@ -28,7 +28,14 @@ echo "Adding needed development packages..."
 sudo pacman -S base-devel --noconfirm
 
 # Add universe and arch repos
+echo "Adding universe repositories..."
+if grep -q "[universe]" /etc/pacman.conf; then
 echo "${universe}" | sudo tee -a /etc/pacman.conf
+fi
+echo "Adding arch linux repositories..."
+if grep -q "[extra]" /etc/pacman.conf; then
+  echo "${arch}" | sudo tee -a /etc/pacman.conf
+fi
 sudo pacman -Sy --noconfirm
 
 # Add Arch support
