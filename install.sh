@@ -1,6 +1,6 @@
 #!/bin/sh
 
-set -e # -e: exit on error
+set -uo pipefail
 
 universe="
 [universe]

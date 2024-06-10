@@ -1,6 +1,6 @@
 #!/bin/sh
 
-set -eufo pipefail
+set -uo pipefail
 
 source ~/.local/share/chezmoi/helpers.sh
 
