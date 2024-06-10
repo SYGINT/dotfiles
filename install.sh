@@ -22,15 +22,17 @@ Include = /etc/pacman.d/mirrorlist-arch"
 # Update Repositories and Packages
 sudo pacman -Syu --noconfirm
 
+# Add needed development packages
 sudo pacman -S base-devel --noconfirm
 
-# Add universe repos
+# Add universe and arch repos
 echo "${universe}" | sudo tee -a /etc/pacman.conf
 sudo pacman -Sy --noconfirm
 
 # Add Arch support
 sudo pacman -S artix-archlinux-support --noconfirm
 
+# Add Arch keyring to database
 sudo pacman-key --populate archlinux
 
 # Edit pacman.d mirror list to include arch repos
