@@ -30,7 +30,7 @@ sudo pacman -S base-devel --noconfirm
 # Add universe and arch repos
 echo "Adding universe repositories..."
 if grep -q "[universe]" /etc/pacman.conf; then
-echo "${universe}" | sudo tee -a /etc/pacman.conf
+  echo "${universe}" | sudo tee -a /etc/pacman.conf
 fi
 echo "Adding arch linux repositories..."
 if grep -q "[extra]" /etc/pacman.conf; then
