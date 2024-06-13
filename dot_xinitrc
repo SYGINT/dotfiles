@@ -1,0 +1,15 @@
+# dunst &
+# sxhkd &
+# udiskie &
+# xbanish &
+# xscreensaver '''&'''
+# xclock -geometry 50x50-1+1 &
+# xterm -geometry 80x50+494+51 &
+# xterm -geometry 80x20+494-0 &
+# exec xterm -geometry 80x66+0+0 -name login
+
+# xsetroot -cursor_name left_ptr &
+# xrb -load ~/.config/X11/xresources &
+# xmodmap ~/.config/X11/xmodmap &
+
+exec i3
