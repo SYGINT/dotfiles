@@ -38,15 +38,15 @@ sudo pacman-key --populate archlinux
 
 # Initialize chezmoi
 echo "Initializing chezmoi..."
-if [ ! "$(command -v chezmoi)" ]; then
+#if [ ! "$(command -v chezmoi)" ]; then
   sudo pacman -S chezmoi --noconfirm
-fi
+#fi
 
 # Setup git
-if [ ! "$(command -v git)" ]; then
+#if [ ! "$(command -v git)" ]; then
   echo "Installing git..."
   sudo pacman -S git --noconfirm
-fi
+#fi
 
 # Pull down and setup dotfiles
 echo "Initializing dotfiless..."
