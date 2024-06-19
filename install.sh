@@ -37,13 +37,13 @@ echo "Adding arch linux keying to database..."
 sudo pacman-key --populate archlinux
 
 # Install chezmoi
-if [ "$(command -v chezmoi)" == "" ]; then
+if ! command -v chezmoi &> /dev/null; then
   echo "Installing chezmoi..."
   sudo pacman -S chezmoi --noconfirm
 fi
 
 # Install git
-if [ "$(command -v git)" == "" ]; then
+if ! command -v git &> /dev/null; then
   echo "Installing git..."
   sudo pacman -S git --noconfirm
 fi
