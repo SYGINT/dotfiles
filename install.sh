@@ -42,6 +42,11 @@ if [ ! "$(command -v chezmoi)" ]; then
   sudo pacman -S chezmoi --noconfirm
 fi
 
+# Setup git
+if [ ! "$(command -v git)" ]; then
+  echo "Installing git..."
+  sudo pacman -S git --noconfirm
+fi
 
 # Pull down and setup dotfiles
 echo "Initializing dotfiless..."
