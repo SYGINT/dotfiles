@@ -23,7 +23,7 @@ sudo cp /etc/pacman.conf /etc/pacman.conf.bak
 
 # Add Arch linux repos
 echo "Adding arch linux repositories..."
-if ! grep -q "[extra]" /etc/pacman.conf; then
+if ! grep -q "\[extra\]" /etc/pacman.conf; then
   echo "${arch}" | sudo tee -a /etc/pacman.conf
 fi
 sudo pacman -Sy --noconfirm
