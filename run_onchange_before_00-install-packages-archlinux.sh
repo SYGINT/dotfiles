@@ -4,7 +4,7 @@ set -uo pipefail
 
 source ~/.local/share/chezmoi/helpers.sh
 
-if if ! command -v paru &> /dev/null; then
+if ! command -v paru &> /dev/null; then
   sudo pacman -S --needed base-devel
   git clone https://aur.archlinux.org/paru.git
   cd paru
