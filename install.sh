@@ -2,16 +2,6 @@
 
 set -uo pipefail
 
-universe="
-[universe]
-Server = https://universe.artixlinux.org/\$arch
-Server = https://mirror1.artixlinux.org/universe/\$arch
-Server = https://mirror.pascalpuffke.de/artix-universe/\$arch
-Server = https://mirrors.qontinuum.space/artixlinux-universe/\$arch
-Server = https://mirror1.cl.netactuate.com/artix/universe/\$arch
-Server = https://ftp.crifo.org/artix-universe/\$arch
-Server = https://artix.sakamoto.pl/universe/\$arch"
-
 arch="
 [extra]
 Include = /etc/pacman.d/mirrorlist-arch
@@ -27,13 +17,9 @@ sudo pacman -Syu --noconfirm
 echo "Adding needed development packages..."
 sudo pacman -S base-devel --noconfirm
 
-# Add universe and arch repos
-echo "Adding universe repositories..."
-if grep -q "[universe]" /etc/pacman.conf; then
-  echo "${universe}" | sudo tee -a /etc/pacman.conf
-fi
+# Add Arch linux repos
 echo "Adding arch linux repositories..."
-if grep -q "[extra]" /etc/pacman.conf; then
+if ! grep -q "[extra]" /etc/pacman.conf; then
   echo "${arch}" | sudo tee -a /etc/pacman.conf
 fi
 sudo pacman -Sy --noconfirm
