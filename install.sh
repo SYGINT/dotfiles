@@ -48,6 +48,17 @@ if ! command -v git &> /dev/null; then
   sudo pacman -S git --noconfirm
 fi
 
+# Install paru
+if ! command -v paru &> /dev/null; then
+  echo "Installing paru..."
+  sudo pacman -S --needed base-devel
+  git clone https://aur.archlinux.org/paru.git
+  cd paru
+  makepkg -si
+  cd ..
+  rm -rf paru
+fi
+
 # Pull down and setup dotfiles
 echo "Initializing dotfiless..."
 chezmoi init --apply https://github.com/sygint/dotfiles.git
