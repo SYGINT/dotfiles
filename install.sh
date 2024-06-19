@@ -36,10 +36,15 @@ sudo pacman -S artix-archlinux-support --noconfirm
 echo "Adding arch linux keying to database..."
 sudo pacman-key --populate archlinux
 
+# Initialize chezmoi
+echo "Initializing chezmoi..."
 if [ ! "$(command -v chezmoi)" ]; then
   sudo pacman -S chezmoi --noconfirm
 fi
 
+
+# Pull down and setup dotfiles
+echo "Initializing dotfiless..."
 chezmoi init --apply https://github.com/sygint/dotfiles.git
 chezmoi cd
 git remote remove origin
