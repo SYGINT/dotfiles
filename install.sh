@@ -17,6 +17,10 @@ sudo pacman -Syu --noconfirm
 echo "Adding needed development packages..."
 sudo pacman -S base-devel --noconfirm
 
+# Backup pacman.conf before edits...
+echo "Backing up pacman.conf..."
+sudo cp /etc/pacman.conf /etc/pacman.conf.bak
+
 # Add Arch linux repos
 echo "Adding arch linux repositories..."
 if ! grep -q "[extra]" /etc/pacman.conf; then
