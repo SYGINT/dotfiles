@@ -36,17 +36,17 @@ sudo pacman -S artix-archlinux-support --noconfirm
 echo "Adding arch linux keying to database..."
 sudo pacman-key --populate archlinux
 
-# Initialize chezmoi
-echo "Initializing chezmoi..."
-#if [ ! "$(command -v chezmoi)" ]; then
+# Install chezmoi
+if [ "$(command -v chezmoi)" == "" ]; then
+  echo "Installing chezmoi..."
   sudo pacman -S chezmoi --noconfirm
-#fi
+fi
 
-# Setup git
-#if [ ! "$(command -v git)" ]; then
+# Install git
+if [ "$(command -v git)" == "" ]; then
   echo "Installing git..."
   sudo pacman -S git --noconfirm
-#fi
+fi
 
 # Pull down and setup dotfiles
 echo "Initializing dotfiless..."
